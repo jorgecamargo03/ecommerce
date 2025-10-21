@@ -4,7 +4,6 @@ import axios from 'axios';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import { CiSearch } from "react-icons/ci";
-import { MdDelete } from "react-icons/md";
 import apiUrl from '@/app/middleWare/apiUrl'
 import CardCartProduct from '../../components/cardCartProduct/page'
 import Message from '@/app/components/message/page';

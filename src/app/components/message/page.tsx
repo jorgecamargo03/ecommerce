@@ -1,3 +1,4 @@
+'use client'
 import React, { useEffect } from 'react'
 import { FaCheckCircle } from "react-icons/fa";
 import { MdError } from "react-icons/md";
