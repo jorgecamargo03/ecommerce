@@ -2,7 +2,7 @@
 import { UseMeproducts } from '@/app/context/MeproductsProvider';
 import axios from 'axios';
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import apiUrl from '@/app/middleWare/apiUrl'
 import CardCartProduct from '../../components/cardCartProduct'
@@ -25,15 +25,7 @@ const MeCart = () => {
     if (e) return setProductsSelected(Meproduct.map(e => e._id));
     if (!e) return setProductsSelected([]);
   }
-  useEffect(()=>{
-    const reload = sessionStorage.getItem('reload')
-    if(!reload){
-      sessionStorage.setItem('reload','true')
-      window.location.reload();
-      return
 
-    }
-  },[])
   async function deletedMany() {
     
     setOpenModal(true)
@@ -86,7 +78,7 @@ const MeCart = () => {
         onConfirm={deletedMany}
       />
 
-      <div className='p-3  flex bg-white shadow-gray-300 shadow-sm w-full justify-between mt-15 items-center'>
+      <div className='p-3  flex bg-white shadow-gray-300 shadow-sm w-full justify-between mt-15 items-center sticky'>
         <p className='text-blue-600 border-l-2 border-l-blue-800 pl-4 text-lg
         md:text-2xl'>Carrinho de compras</p>
         <div className='border-blue-500 border-2 flex' >
@@ -114,7 +106,7 @@ const MeCart = () => {
 
         <div>
 
-          <div className='flex gap-3 items-center mt-1 justify-between bg-white shadow-sm p-4 shadow-gray-700 z-[100] border-b-gray-500/50 border-b-1 px-12 '>
+          <div className='flex gap-3 items-center mt-1 justify-between bg-white shadow-sm p-4  shadow-gray-700 z-[100] border-b-gray-500/50 border-b-1 px-12 '>
             <div className='flex gap-3 items-center max-w-95 w-full '>
               <input type="checkbox" name="" id=""
                 checked={Meproduct.length === productsSelected.length ? true : false}
@@ -129,8 +121,8 @@ const MeCart = () => {
           </div>
         </div>
 
-        <div className='overflow-y-auto overflow-x-hidden md:max-h-130  max-h-111 
-        md:mb-20
+        <div className='overflow-y-auto overflow-x-hidden  max-h-full 
+        mb-20 
         px-6'>
 
     
@@ -162,7 +154,7 @@ const MeCart = () => {
 
       </div>
 
-      <div className='bg-white shadow-sm shadow-zinc-800 p-3 fixed bottom-0
+      <div className='bg-white shadow-sm shadow-zinc-800 z-50 p-3 fixed bottom-0
      w-full justify-between flex py-5  gap-2  text-sm mt-5'>
 
         <div className='flex gap-2 items-center'>

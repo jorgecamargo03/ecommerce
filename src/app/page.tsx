@@ -38,7 +38,7 @@ type ApiTypeProduct = {
 export default function Home() {
   const [msg, setMsg] = useState('')
   const [Apiproducts, setApiProducts] = useState<ApiTypeProduct[]>([])
-  const { Meproduct, setMeproduct, token } = UseMeproducts()
+  const { Meproduct, setMeproduct, token,tokenValido } = UseMeproducts()
   const [loading, setLoading] = useState(true)
   const refUltimosProdutos = useRef<HTMLDivElement>(null)
   const [visibleCount, setVisibleCount] = useState(8)
@@ -61,12 +61,7 @@ export default function Home() {
   const router = useRouter()
 
   useEffect(() => {
-    const hasReloaded = sessionStorage.getItem('hasReloaded');
-    if (!hasReloaded) {
-      sessionStorage.setItem('hasReloaded', 'true');
-      window.location.reload();
-      window.location.reload();
-    }
+   
 
     let cancel = false;
     async function fetchProduct() {
@@ -84,6 +79,18 @@ export default function Home() {
     setTimeout(() => { fetchProduct() }, 1000);
     return () => { cancel = true }
   }, [])
+  useEffect(()=>{
+    console.log(tokenValido);
+    
+    if(tokenValido===false){
+     const timeout = setTimeout(() => {
+      window.location.reload();
+    
+     }, 5000);
+     return () => clearTimeout(timeout);
+
+    }
+  },[tokenValido])
 
   async function addItemCart(id: number) {
     try {
