@@ -5,9 +5,9 @@ import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import { CiSearch } from "react-icons/ci";
 import apiUrl from '@/app/middleWare/apiUrl'
-import CardCartProduct from '../../components/cardCartProduct/page'
-import Message from '@/app/components/message/page';
-import ConfirmModal from '@/app/components/confirmModal/page';
+import CardCartProduct from '../../components/cardCartProduct'
+import Message from '@/app/components/message';
+import ConfirmModal from '@/app/components/confirmModal';
 import cartEmpty from '@/images/cartEmpty.png'
 import Link from 'next/link';
 import { useFormatCurrency } from '@/app/middleWare/priceBrl';

@@ -13,7 +13,7 @@ import axios from 'axios';
 import apiUrl from '../../middleWare/apiUrl'
 import { useRouter } from 'next/navigation';
 
-import Message from '@/app/components/message/page';
+import Message from '@/app/components/message';
 
 const poppins = Poppins({
     subsets: ["latin"],

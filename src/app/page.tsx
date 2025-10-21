@@ -15,9 +15,9 @@ import product16 from '../images/exclusive.png'
 import logoPlay from '../images/play-store.png'
 import logoApple from '../images/app-store.png'
 //components
-import CardProduto from './components/cardProduct/page'
+import CardProduto from './components/cardProduct'
 import { UseMeproducts } from "./context/MeproductsProvider/page";
-import Message from "./components/message/page";
+import Message from "./components/message";
 //icons react-icon
 import { FaStar } from "react-icons/fa";
 import { FaArrowAltCircleDown, FaArrowAltCircleUp } from "react-icons/fa";

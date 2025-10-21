@@ -1,6 +1,5 @@
 'use client'
 import React, { useState } from 'react'
-import { MdError } from "react-icons/md";
 import { IoIosEye } from "react-icons/io";
 import { IoMdEyeOff } from "react-icons/io";
 import Link from 'next/link';
@@ -8,12 +7,11 @@ import bgBlue from '../../../images/dark-blue-background-in-polygonal-style-vect
 import { Poppins } from 'next/font/google';
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-import { FaCheckCircle } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import axios from 'axios';
 import apiUrl from '../../middleWare/apiUrl'
 import { useRouter } from 'next/navigation';
-import Message from '@/app/components/message/page';
+import Message from '@/app/components/message';
 
 const poppins = Poppins({
     subsets: ["latin"],

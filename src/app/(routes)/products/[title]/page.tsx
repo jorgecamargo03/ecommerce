@@ -11,9 +11,9 @@ import { useFormatCurrency } from '@/app/middleWare/priceBrl'
 import { FaCartPlus } from "react-icons/fa";
 import { UseMeproducts } from '@/app/context/MeproductsProvider/page'
 import apiUrl from '@/app/middleWare/apiUrl'
-import Message from '@/app/components/message/page'
+import Message from '@/app/components/message'
 import { useRouter } from 'next/navigation'
-import CardProduct from '@/app/components/cardProduct/page'
+import CardProduct from '@/app/components/cardProduct'
 type ApiTypeProduct = {
   id: number
   title: string
