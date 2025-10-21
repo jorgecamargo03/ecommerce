@@ -1,5 +1,5 @@
 'use client'
-import { UseMeproducts } from '@/app/context/MeproductsProvider/page';
+import { UseMeproducts } from '@/app/context/MeproductsProvider';
 import axios from 'axios';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'

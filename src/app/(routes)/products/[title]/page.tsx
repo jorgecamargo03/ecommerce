@@ -9,7 +9,7 @@ import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { useFormatCurrency } from '@/app/middleWare/priceBrl'
 import { FaCartPlus } from "react-icons/fa";
-import { UseMeproducts } from '@/app/context/MeproductsProvider/page'
+import { UseMeproducts } from '@/app/context/MeproductsProvider'
 import apiUrl from '@/app/middleWare/apiUrl'
 import Message from '@/app/components/message'
 import { useRouter } from 'next/navigation'

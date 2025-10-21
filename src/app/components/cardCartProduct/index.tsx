@@ -1,7 +1,7 @@
 'use client'
 import Image from 'next/image'
 import React from 'react'
-import { UseMeproducts } from '@/app/context/MeproductsProvider/page';
+import { UseMeproducts } from '@/app/context/MeproductsProvider';
 import { MdDelete } from "react-icons/md";
 import axios from 'axios';
 import apiUrl from '../../middleWare/apiUrl'

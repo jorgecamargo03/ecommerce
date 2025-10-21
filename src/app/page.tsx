@@ -16,7 +16,7 @@ import logoPlay from '../images/play-store.png'
 import logoApple from '../images/app-store.png'
 //components
 import CardProduto from './components/cardProduct'
-import { UseMeproducts } from "./context/MeproductsProvider/page";
+import { UseMeproducts } from "./context/MeproductsProvider";
 import Message from "./components/message";
 //icons react-icon
 import { FaStar } from "react-icons/fa";
