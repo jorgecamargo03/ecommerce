@@ -49,7 +49,6 @@ export default function Home() {
       return newCount >= Apiproducts.length ? Apiproducts.length : newCount
     })
   }
-
   const handleViewless = () => {
     setVisibleCount(prev => {
       const newCount = prev - 4;
@@ -57,12 +56,10 @@ export default function Home() {
     });
     refUltimosProdutos.current?.scrollIntoView({ behavior: 'auto' });
   }
-
   const router = useRouter()
 
   useEffect(() => {
    
-
     let cancel = false;
     async function fetchProduct() {
       try {
@@ -79,18 +76,7 @@ export default function Home() {
     setTimeout(() => { fetchProduct() }, 1000);
     return () => { cancel = true }
   }, [])
-  useEffect(()=>{
-    console.log(tokenValido);
-    
-    if(tokenValido===false){
-     const timeout = setTimeout(() => {
-      window.location.reload();
-    
-     }, 5000);
-     return () => clearTimeout(timeout);
-
-    }
-  },[tokenValido])
+  
 
   async function addItemCart(id: number) {
     try {
