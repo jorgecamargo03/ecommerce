@@ -59,7 +59,11 @@ export default function Home() {
   const router = useRouter()
 
   useEffect(() => {
-   
+    const checksessionToken = sessionStorage.getItem('sessionToken')
+   if (!checksessionToken){
+    sessionStorage.setItem('sessionToken','true')
+     window.location.reload();
+   }
     let cancel = false;
     async function fetchProduct() {
       try {
