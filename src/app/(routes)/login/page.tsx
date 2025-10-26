@@ -10,10 +10,10 @@ import { MdEmail } from "react-icons/md";
 
 import { FaLock } from "react-icons/fa";
 import axios from 'axios';
-import apiUrl from '../../middleWare/apiUrl'
+import apiUrl from '../../hooks/apiUrl'
 import { useRouter } from 'next/navigation';
 
-import Message from '@/app/components/message';
+import Message from '@/app/components/components_Extras/message';
 
 const poppins = Poppins({
     subsets: ["latin"],

@@ -4,13 +4,13 @@ import axios from 'axios';
 import Image from 'next/image';
 import React, { useState } from 'react'
 import { CiSearch } from "react-icons/ci";
-import apiUrl from '@/app/middleWare/apiUrl'
-import CardCartProduct from '../../components/cardCartProduct'
-import Message from '@/app/components/message';
-import ConfirmModal from '@/app/components/confirmModal';
+import apiUrl from '@/app/hooks/apiUrl'
+import CardCartProduct from '../../components/components_Extras/cardCartProduct'
+import Message from '@/app/components/components_Extras/message';
+import ConfirmModal from '@/app/components/components_Extras/confirmModal';
 import cartEmpty from '@/images/cartEmpty.png'
 import Link from 'next/link';
-import { useFormatCurrency } from '@/app/middleWare/priceBrl';
+import { useFormatCurrency } from '@/app/hooks/priceBrl';
 const MeCart = () => {
   const [openModal, setOpenModal] = useState(false)
   const {formatCurrency}=useFormatCurrency()

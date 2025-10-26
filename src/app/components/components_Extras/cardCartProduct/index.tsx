@@ -4,10 +4,10 @@ import React from 'react'
 import { UseMeproducts } from '@/app/context/MeproductsProvider';
 import { MdDelete } from "react-icons/md";
 import axios from 'axios';
-import apiUrl from '../../middleWare/apiUrl'
+import apiUrl from '../../../hooks/apiUrl'
 
 import { useRouter } from 'next/navigation';
-import { useFormatCurrency } from '@/app/middleWare/priceBrl';
+import { useFormatCurrency } from '@/app/hooks/priceBrl';
 import Link from 'next/link';
 type meProductType = {
     _id: string

@@ -6,7 +6,7 @@ import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
 import { FaInfoCircle } from "react-icons/fa";
 import Link from 'next/link';
-import { useFormatCurrency } from '@/app/middleWare/priceBrl';
+import { useFormatCurrency } from '@/app/hooks/priceBrl';
 import { useRouter } from 'next/navigation';
 type RatingType={
     rate:number,

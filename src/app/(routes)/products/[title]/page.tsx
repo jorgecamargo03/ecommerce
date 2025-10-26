@@ -7,13 +7,13 @@ import React, { useEffect, useState } from 'react'
 import { MoonLoader } from 'react-spinners'
 import { FaRegStar } from "react-icons/fa";
 import { FaStar } from "react-icons/fa";
-import { useFormatCurrency } from '@/app/middleWare/priceBrl'
+import { useFormatCurrency } from '@/app/hooks/priceBrl'
 import { FaCartPlus } from "react-icons/fa";
 import { UseMeproducts } from '@/app/context/MeproductsProvider'
-import apiUrl from '@/app/middleWare/apiUrl'
-import Message from '@/app/components/message'
+import apiUrl from '@/app/hooks/apiUrl'
+import Message from '@/app/components/components_Extras/message'
 import { useRouter } from 'next/navigation'
-import CardProduct from '@/app/components/cardProduct'
+import CardProduct from '@/app/components/components_Extras/cardProduct'
 type ApiTypeProduct = {
   id: number
   title: string

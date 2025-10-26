@@ -1,7 +1,7 @@
 'use client'
 import axios from "axios";
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import apiUrl from '@/app/middleWare/apiUrl'
+import apiUrl from '@/app/hooks/apiUrl'
 
 
 type Meproduct = {

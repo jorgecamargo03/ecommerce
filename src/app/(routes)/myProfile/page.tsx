@@ -2,7 +2,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { IoPersonCircle } from "react-icons/io5";
-import apiUrl from '@/app/middleWare/apiUrl'
+import apiUrl from '@/app/hooks/apiUrl'
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { MoonLoader } from 'react-spinners';
