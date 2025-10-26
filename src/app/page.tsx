@@ -38,7 +38,7 @@ type ApiTypeProduct = {
 export default function Home() {
   const [msg, setMsg] = useState('')
   const [Apiproducts, setApiProducts] = useState<ApiTypeProduct[]>([])
-  const { Meproduct, setMeproduct, token,tokenValido } = UseMeproducts()
+  const { Meproduct, setMeproduct, token } = UseMeproducts()
   const [loading, setLoading] = useState(true)
   const refUltimosProdutos = useRef<HTMLDivElement>(null)
   const [visibleCount, setVisibleCount] = useState(8)
